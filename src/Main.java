@@ -10,42 +10,47 @@ public class Main {
         int choice;
         System.out.println("--------Student Grade Managment System--------");
         System.out.println("1.Add Student");
-        System.out.println("2.View All Students");
-        System.out.println("3. Search Student");
-        System.out.println("4. Update Marks");
-        System.out.println("5. Delete Studen");
-        System.out.println("6. View Grade Report");
+        System.out.println("2. Search Student");
+        System.out.println("3. Update Marks");
+        System.out.println("4. Delete Studen");
+        System.out.println("5. View Grade Report");
+        System.out.println("6.View All Students");
         System.out.println("7. Exit");
         choice = sc.nextInt();
              switch (choice) {
             case 1 ->{
-                int id=sc.nextInt();
-                String name=sc.next();
-                int[] marks= new int[5];
+                // int id=sc.nextInt();
+                // String name=sc.next();
+                // int[] marks= new int[5];
+                int id=103;
+                String name="anand";
+                int[] marks= {100,200,300,400,500};
                 // marks=sc.nextInt();
-                for(int i=0; i<5; i++){
-                    marks[i]=sc.nextInt();
-                }
+                // for(int i=0; i<5; i++){
+                //     marks[i]=sc.nextInt();
+                // }
                 GM.addStudent(id,name,marks);
                 System.out.println("student is added.");
                 break;
             }
-            case 2 ->{
-                // ViewAllStudents();
-
-            }
-            case 3 -> {
+            case 2 -> {
                 int Id=sc.nextInt();
                 GM.SearchStudent(Id);
             }
+            case 3 ->{
+                int Id=sc.nextInt();
+                GM.UpdateMarks(Id);
+                System.out.println("Added succesfully!");
+            }
             case 4 ->{
-                // UpdateMarks(Id);
+                int Id=sc.nextInt();
+                GM.RemoveStudent(Id);
             }
             case 5 ->{
-                // DeleteStudent(Id);
+                // ViewGradeReport();
             }
             case 6 ->{
-                // ViewGradeReport();
+                GM.ViewAllStudents();
             }
             case 7->{
                 con = false;
