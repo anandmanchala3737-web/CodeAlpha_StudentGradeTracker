@@ -7,6 +7,10 @@ public class GradeManager{
     Scanner sc = new Scanner(System.in);
     ArrayList<Student> students = new ArrayList<>();
 
+    public ArrayList<Student> getStudents(){
+        return this.students;
+    }
+
     public void addStudent(int Id, String name, int[] marks){
         Student student = new Student(Id, name, marks);
         students.add(student);

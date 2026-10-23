@@ -4,17 +4,18 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
         GradeManager GM =new GradeManager();
+        GradeCalculator GC = new GradeCalculator();
         Scanner sc = new Scanner(System.in);
         boolean con = true;
         while(con){
         int choice;
         System.out.println("--------Student Grade Managment System--------");
         System.out.println("1.Add Student");
-        System.out.println("2. Search Student");
+        System.out.println("2. Search Student");//it return info of std and all sudjet marks
         System.out.println("3. Update Marks");
-        System.out.println("4. Delete Studen");
-        System.out.println("5. View Grade Report");
-        System.out.println("6.View All Students");
+        System.out.println("4. Delete Student");
+        System.out.println("5. View Grade Report"); //it will return info and avg and high and low marks not all subject marks
+        System.out.println("6.View All Students"); //it will all return info and avg and high and low marks not all subject marks
         System.out.println("7. Exit");
         choice = sc.nextInt();
              switch (choice) {
@@ -48,6 +49,8 @@ public class Main {
             }
             case 5 ->{
                 // ViewGradeReport();
+                int Id = sc.nextInt();
+                // GC.AvgMarks(GM.getStudents(), Id);
             }
             case 6 ->{
                 GM.ViewAllStudents();

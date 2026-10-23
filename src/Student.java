@@ -9,6 +9,9 @@ public class Student{
         this.name=name;
         this.marks=marks;
     }
+    Student(){
+        
+    }
 //Setter
     void setId(int Id){
         this.Id=Id;
